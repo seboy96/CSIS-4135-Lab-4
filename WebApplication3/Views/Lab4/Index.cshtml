@@ -1,0 +1,30 @@
+﻿@model System.DateTime
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (Model.Hour < 12)
+{
+    <h1 class="header">Good Morning</h1>
+}
+else
+{
+    if (Model.Hour < 18)
+    {
+        <h1 class="header">Good Afternoon</h1>
+    }
+    else
+    {
+        <h1 class="header">Good Night</h1>
+    }
+}
+
+<h2> It is now @Model.ToShortTimeString() on @Model.ToLongDateString()</h2>
+
+@{System.DateTime dec31 = new DateTime(Model.Year, 12, 31);
+    System.DateTime diff = dec31.AddDays(-(Model.DayOfYear));}
+<h3> There is @diff.DayOfYear more days in @Model.Year</h3>
+
+<a asp-action="Waffler" class="btn btn-success">Generate Waffles</a>
+

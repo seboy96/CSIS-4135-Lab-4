@@ -35,3 +35,22 @@ body {
         display: none;
     }
 }
+
+.header {
+    padding: 20px;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    color: white;
+}
+
+.cont {
+    margin: 10px 5px 2px 5px;
+    padding: 10px;
+    border-style: solid;
+    border-width: thin;
+    border-color: dodgerblue;
+    background-color: rgb(230, 255, 255);
+    border-radius: 10px;
+}
+
+

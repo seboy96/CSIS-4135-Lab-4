@@ -1,0 +1,20 @@
+﻿@model List<Microsoft.AspNetCore.Html.HtmlString>
+
+@{
+    ViewData["Title"] = "Waffler";
+}
+
+<h1 class="header">Generate Waffles</h1>
+
+<a asp-action="Waffler/1" class="btn btn-success">1</a>
+<a asp-action="Waffler/2" class="btn btn-success">2</a>
+<a asp-action="Waffler/3" class="btn btn-success">3</a>
+<a asp-action="Waffler/4" class="btn btn-success">4</a>
+<a asp-action="Waffler/5" class="btn btn-success">5</a>
+
+@foreach (var item in Model)
+{
+<div class="cont">
+    @item
+</div>
+}
